@@ -9,10 +9,10 @@
 > **Summary** — Agent Zero ships with web-UI authentication disabled (`AUTH_LOGIN` unset) and enables the `code_execution` plugin by default. Any client that can reach the chat API without credentials can drive the built-in agent to invoke `code_execution`, which writes the model-generated string to a persistent shell. The result is arbitrary operating-system command execution with the privileges of the Agent Zero process.
 
 <!--
-  STATUS — 2026-11-16: not yet submitted to any CNA. This file is a draft
-  prepared for a future cve.org request.
-  Remaining items before submission: exact version/commit, and (optionally)
-  a Docker-based retest to support AV:N. See PUBLISH_CHECKLIST.md.
+  STATUS — 2026-11-17: CVE ID requested from MITRE CNA-LR
+  (CAN-2026-2043675); CVE ID pending.
+  Remaining item: an optional Docker-based retest to support AV:N.
+  See PUBLISH_CHECKLIST.md.
 -->
 
 ## Metadata
@@ -46,12 +46,12 @@ Three properties combine into a security issue:
 
 | Version | Status |
 |---|---|
-| Agent Zero v2.x (tested 2026-11-16) | **Confirmed affected** |
+| Agent Zero v2.15 (tested 2026-11-16) | **Confirmed affected** |
 | v2.9 – v2.15 | Affected — sink at `shell_local.py:66`, auth bypass present in `helpers/api.py` |
 | v2.0 – v2.5 | Affected — same code path, sink at `shell_local.py:59` (line number differs) |
 | v1.x | Not tested |
 
-> The exact build was not recorded during testing. The finding was reproduced on a default v2 source install on 2026-11-16; an exact tag or commit will be added here before submission.
+> Tested build: Agent Zero v2.15, default source install, 2026-11-16.
 
 Affected components:
 
@@ -234,8 +234,9 @@ Agent Zero is designed to execute terminal commands — that is the purpose of `
 
 | Date | Event |
 |---|---|
-| 2026-11-16 | Vulnerability verified on a self-hosted source install |
+| 2026-11-16 | Vulnerability verified on a self-hosted Agent Zero v2.15 source install |
 | 2026-11-16 | This draft prepared; no CNA contacted, no CVE ID requested |
+| 2026-11-17 | Submitted to MITRE CNA-LR (CAN-2026-2043675); CVE ID pending |
 
 ## References
 
