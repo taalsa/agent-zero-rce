@@ -27,7 +27,7 @@
 | CVSS 3.1 (measured) | **8.4 High** — `CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H` |
 | CVSS 3.1 (documented Docker deployment) | **9.8 Critical** — `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H` |
 | Status | Draft — no CVE ID requested yet |
-| Tested on | Agent Zero v2, source install via `run_ui.py`, 2026-11-16 |
+| Tested on | Agent Zero v2.15, source install via `run_ui.py`, 2026-11-16 |
 | Reporter | Independent researcher |
 
 > **Why two vectors.** The measured run used a source install, and `run_ui.py` binds to `localhost` by default. That supports `AV:L` only, hence 8.4. The second vector applies to the Docker deployment documented for v1.10–v2.14, where the published command maps the web port on all interfaces (`-p 80:80`). That configuration is not separately reproduced in this report yet; it is derived from the vendor's own documented command, not from a live test. Submitting the 9.8 vector requires completing that retest.
