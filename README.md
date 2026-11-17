@@ -254,4 +254,4 @@ If you operate Agent Zero: set `AUTH_LOGIN` / `AUTH_PASSWORD`, bind it to loopba
 
 ## Credits
 
-Reported by an independent security researcher.
+Gaoxihan.
