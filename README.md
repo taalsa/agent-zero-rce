@@ -22,7 +22,7 @@
 | Vendor | agent0ai (formerly frdel) |
 | Product | Agent Zero |
 | Repository | https://github.com/agent0ai/agent-zero |
-| Affected versions | v2.x — tested on a source install, 2026-11-16 |
+| Affected versions | v2.0 – v2.15 |
 | Vulnerability class | CWE-306 (primary), CWE-78 (secondary) |
 | CVSS 3.1 (measured) | **8.4 High** — `CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H` |
 | CVSS 3.1 (documented Docker deployment) | **9.8 Critical** — `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H` |
